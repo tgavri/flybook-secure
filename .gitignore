@@ -1,0 +1,13 @@
+# Secrets — never commit
+.env
+secrets/
+
+# Locally rebuilt CGI binary (architecture-specific; keep out of the repo)
+cgi-bin/status_check
+
+# Scanner output
+results/
+
+# OS / editor noise
+.DS_Store
+*.swp
