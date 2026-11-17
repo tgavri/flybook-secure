@@ -22,11 +22,16 @@ function autocomplete(inp, arr) {
                 /*create a DIV element for each matching element:*/
                 b = document.createElement("DIV");
                 /*make the matching letters bold:*/
-                b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
-                b.innerHTML += arr[i].substr(val.length);
-                /*insert a input field that will hold the current array item's value:*/
-                b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
-                /*execute a function when someone clicks on the item value (DIV element):*/
+                /*build nodes safely (no innerHTML) to prevent DOM XSS (F18, CWE-79):*/
+                var strong = document.createElement("strong");
+                strong.textContent = arr[i].substr(0, val.length);
+                b.appendChild(strong);
+                b.appendChild(document.createTextNode(arr[i].substr(val.length)));
+                var hidden = document.createElement("input");
+                hidden.type = "hidden";
+                hidden.value = arr[i];
+                b.appendChild(hidden);
+		/*execute a function when someone clicks on the item value (DIV element):*/
                 b.addEventListener("click", function(e) {
                     /*insert the value for the autocomplete text field:*/
                     inp.value = this.getElementsByTagName("input")[0].value;

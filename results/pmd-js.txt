@@ -1,0 +1,8 @@
+web-app/vendor/autocomp.js:44:	IfStmtsMustUseBraces:	Avoid using if statements without curly braces
+web-app/vendor/autocomp.js:45:	EqualComparison:	Use ===/!== to compare with true/false or Numbers
+web-app/vendor/autocomp.js:51:	EqualComparison:	Use ===/!== to compare with true/false or Numbers
+web-app/vendor/autocomp.js:57:	EqualComparison:	Use ===/!== to compare with true/false or Numbers
+web-app/vendor/autocomp.js:62:	IfStmtsMustUseBraces:	Avoid using if statements without curly braces
+web-app/vendor/autocomp.js:68:	IfStmtsMustUseBraces:	Avoid using if statements without curly braces
+web-app/vendor/autocomp.js:71:	IfStmtsMustUseBraces:	Avoid using if statements without curly braces
+web-app/vendor/autocomp.js:72:	IfStmtsMustUseBraces:	Avoid using if statements without curly braces
